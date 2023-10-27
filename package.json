@@ -8,7 +8,22 @@
     "url": "https://github.com/dojo/widgets/issues"
   },
   "license": "BSD-3-Clause",
+  "type": "commonjs",
   "main": "src/main.tsx",
+  "types": "dist/dev/src/main.d.ts",
+  "module": "dist/dev/src/main.js",
+  "browser": "dist/dev/src/main.js",
+  "unpkg": "dist/dev/src/main.js",
+  "files": [
+    "dist/**"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/dev/src/index.d.ts",
+      "import": "./dist/dev/src/index.ts",
+      "require": "./dist/dev/src/index.js"
+    }
+  },
   "engines": {
     "npm": ">=3.0.0"
   },
@@ -57,11 +72,8 @@
   },
   "devDependencies": {
     "@dojo/cli": "~8.0.0",
-    "@dojo/cli-build-app": "~8.0.0",
-    "@dojo/cli-build-theme": "~8.0.0",
-    "@dojo/cli-build-widget": "~8.0.0",
-    "@dojo/cli-test-intern": "~8.0.0",
-    "@dojo/framework": "~8.0.0",
+    "@dojo/cli-build-widget": "workspace:*",
+    "@dojo/framework": "workspace:*",
     "@dojo/parade": "~2.0.0",
     "@dojo/scripts": "^4.0.3",
     "@material/button": "3.0.0",
